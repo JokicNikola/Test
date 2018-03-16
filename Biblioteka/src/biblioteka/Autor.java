@@ -1,13 +1,29 @@
 package biblioteka;
-
+/**
+ * Predstavlja autora knjige
+ * @author Nikola Jokic
+ * @version 1.0
+ *
+ */
 public class Autor {
-	
+	/**
+	 * Ime autora
+	 */
 	private String ime;
+	/**
+	 * Prezime autora
+	 */
 	private String prezime;
 	
 	public String getIme() {
 		return ime;
 	}
+	
+	/**
+	 * Postavlja novo ime
+	 * @param ime novo ime autora
+	 * @throws java.lang.RuntimeException ako je uneto null ili prazan String
+	 */
 	public void setIme(String ime) {
 		if(ime!=null && ime!="")
 			this.ime = ime;
@@ -16,6 +32,12 @@ public class Autor {
 	public String getPrezime() {
 		return prezime;
 	}
+	
+	/**
+	 * Postavlja novo prezime
+	 * @param prezime novo prezime autora
+	 * @throws java.lang.RuntimeException ako je uneto null ili prazan String
+	 */
 	public void setPrezime(String prezime) {
 		if(prezime!=null && prezime!="")
 			this.prezime = prezime;
@@ -33,7 +55,11 @@ public class Autor {
 		result = prime * result + ((prezime == null) ? 0 : prezime.hashCode());
 		return result;
 	}
-	@Override
+	/**
+	 * Poredi dva autora
+	 * @param obj Drugi autor
+	 * @return true ako oba autora imaju isto ime i prezime, inace false
+	 */
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
