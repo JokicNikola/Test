@@ -9,19 +9,23 @@ public class Autor {
 		return ime;
 	}
 	public void setIme(String ime) {
-		this.ime = ime;
+		if(ime!=null && ime!="")
+			this.ime = ime;
+		else throw new RuntimeException("Morate uneti ime");
 	}
 	public String getPrezime() {
 		return prezime;
 	}
 	public void setPrezime(String prezime) {
-		this.prezime = prezime;
+		if(prezime!=null && prezime!="")
+			this.prezime = prezime;
+		else throw new RuntimeException("Morate uneti prezime");
 	}
-	@Override
+	
 	public String toString() {
 		return "Autor [ime=" + ime + ", prezime=" + prezime + "]";
 	}
-	@Override
+	
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
