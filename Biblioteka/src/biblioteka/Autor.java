@@ -36,7 +36,11 @@ public class Autor {
 	/**
 	 * Postavlja novo prezime
 	 * @param prezime novo prezime autora
-	 * @throws java.lang.RuntimeException ako je uneto null ili prazan String
+	 * @throws java.lang.RuntimeException ako je uneto prezime:
+	 * <ul>
+	 * 	<li> null</li>
+	 *  <li>prazan String</li>
+	 *  </ul>
 	 */
 	public void setPrezime(String prezime) {
 		if(prezime!=null && prezime!="")
